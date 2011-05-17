@@ -87,7 +87,7 @@ class Mailer(object):
 
         for contact in self.expedition_list:
             if self.verbose:
-                print '- Processing %s' % contact.__unicode__()
+                print '- Processing %s' % contact.__unicode__().encode('iso-8859-1')
 
             message = self.build_message(contact)
             try:
